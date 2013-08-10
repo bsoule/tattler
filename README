@@ -1,0 +1,10 @@
+idea! crontab doesn't run on my laptop if it's asleep, so I can write a tattler script and cron it for bedtime and then if my computer is still awake at bedtime it'll tattle on me to Beeminder. Likewise you could set it run in the morning and if you're still in bed you won't get credit. 
+
+for the bedtime goal you would set up a limit goal on beeminder. (limit the number of times you're up after bedtime).
+for the wake goal you would set up a do more goal. (get up early more often).
+
+special bonus for bedtime: if you're out actually socializing with people, you won't get penalized! (that's a plus from my point of view. I don't regret staying up late to spend time with humans. it's staying up late doing a depth first search of the internet that I hate myself for)
+
+to run this script at midnight:
+crontab -e
+00 0 * * * ruby tattler.rb usr/gol 1
